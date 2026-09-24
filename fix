@@ -1,0 +1,7 @@
+#!/bin/sh
+for i in `grep 'Web Site Design By Al-fin' *|awk '{print $1}'|sed ' s/://g '`
+do
+echo $i
+sed ' s/Web Site Design By Al-fin//g ' $i > tmp/$i
+done
+
